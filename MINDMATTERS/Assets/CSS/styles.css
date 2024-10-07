@@ -1,0 +1,587 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  :root {
+    --text-color:#fefae0;
+    --main-color:#90e0ef;
+  } 
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(18,9,53,1) 0%, rgba(74,9,85,1) 35%, rgba(14,37,94,1) 100%);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #120935 ;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+/* MINDMATTERS : Your Mental Health Companion */
+
+.home-body {
+  max-width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.text-side {
+  float: left;
+  width: 65%;
+  padding: 5px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  text-align: left;
+  margin-top: 20px;
+}
+
+.text-side h2 {
+  font-size: 65px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.text-side p {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.image-side {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+}
+
+.image-side img {
+  width: 92%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.stylish-button {
+  text-decoration: none;
+  color: var(--text-color);
+  background: #6a11cb ;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.5s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1.5px;
+}
+
+.stylish-button:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  background: #2575fc;
+}
+
+@media (max-width: 768px) {
+  
+  .home-body {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .text-side,
+  .image-side {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .text-side h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 0;
+  }
+}
+
+/* Introducing MINDMATTERS : A Holistic Approach to Mental Wellness */
+
+.sectionhead  {
+  color: var(--text-color);
+  text-align: center;
+  width: 90%;
+  font-size: 20px;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.features-section {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 80%;
+  color: var(--text-color);
+}
+
+.feature-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  border-radius: 12px;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+.number {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .features-section {
+      grid-template-columns: 1fr;
+  }
+
+  .feature {
+    width:100% ;
+  }
+
+  .sectionhead  {
+    width: 80%;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+/* AI-Powered Chatbot : Your 24/7 Mental Health Support */
+
+.support-section {
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.support-container {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-item summary {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-left: 40px;
+}
+
+.faq-item summary::before {
+  content: '▶';
+  font-size: 14px;
+  color: var(--text-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: var(--text-color);
+  padding-left: 10px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 26px;
+  }
+
+  .faq-item summary {
+      font-size: 18px;
+  }
+
+  .faq-item p {
+      font-size: 14px;
+  }
+}
+
+/* Affordable Psychologist Consultations  / Prioritizing Privacy and Confidentiality */
+
+.consultation {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.consultation-section {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 26px;
+  }
+
+  .features {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .feature-item{
+      width: 100%;
+  }
+
+  .feature-item h3 {
+      font-size: 18px;
+  }
+
+  .feature-item p {
+      font-size: 14px;
+  }
+}
+
+/* Tailored for Students and Corporate Employees */
+
+.tailored {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tailored-section {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arrow-box {
+  display: flex;
+  align-items: center;
+  width: 48%;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.content {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.content p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 26px;
+  }
+
+  .arrow-container {
+      flex-direction: column;
+  }
+
+  .arrow-box {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  .content h3 {
+      font-size: 18px;
+  }
+
+  .content p {
+      font-size: 14px;
+  }
+}
+
+/* Available on Android , iOS and Windows / Footer /   */
+
+.app {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.app .text-side {
+  float: left;
+  width: 65%;
+  padding: 5px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  text-align: left;
+  margin-top: 20px;
+}
+
+.app .text-side h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.app .text-side p {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.image-side {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+}
+
+.app .image-side img {
+  width: 92%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.app .text-side .download-icon img {
+  width: 250px;
+}
+
+.app .text-side p a {
+  color: var(--text-color);
+  font-size: 20px;
+  transition: 1s ease;
+}
+
+.app .text-side p a:hover {
+  color: var(--text-color);
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  
+  .app .home-body {
+    width: 90%;
+    overflow: hidden;
+    margin-top: 1px;
+  }
+  
+  .app .text-side,
+  .image-side {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .app .text-side h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 0;
+  }
+}
+
+/* Privacy Policy */
+
+.Privacy-policy {
+  width: 90%;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.Privacy-policy h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.Privacy-policy h2 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.Privacy-policy h3 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .Privacy-policy h1 {
+      font-size: 2rem;
+  }
+
+  .Privacy-policy h2 {
+      font-size: 1.5rem;
+  }
+
+  .Privacy-policy h3 {
+      font-size: 1.2rem;
+  }
+
+  .Privacy-policy {
+      padding: 15px;
+      margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  h2 {
+      font-size: 1.3rem;
+  }
+
+  h3 {
+      font-size: 1.1rem;
+  }
+
+  .container {
+      padding: 10px;
+  }
+}
